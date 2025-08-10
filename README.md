@@ -1,22 +1,19 @@
-# Project Title: AI-Based Vulnerability Analysis and Payload Generation Tool
+# AI-Based Vulnerability Analysis and Payload Generation Tool
 ## Overview
 This project is an AI/ML-powered vulnerability assessment tool designed to simulate real-world attack payloads and test applications against known security flaws. It leverages machine learning models trained on OWASP Top 10 vulnerabilities, secure coding practices, and best-in-class defense strategies. The tool includes a payload generator built on top of the Ollama framework and uses a hybrid approach combining signature heuristics with AI inference for realistic attack simulation.
 
-## Key Features
-- AI/ML models trained on OWASP Top 10, secure coding standards, and real-world exploit data  
-- Automated payload generation for testing input validation, authentication flaws, injection vectors, and more  
-- Integration with Ollama for high-performance model deployment  
-- Signature-based and heuristic-enhanced detection and attack emulation  
-- Modular architecture for extending new payload types or analysis strategies  
-- CLI and API interfaces for integration into CI/CD pipelines or security scanners  
+## Setup
+- Clone this repository
+  ```
+  git clone https://github.com/DeeDash/vuln-analysis.git
+  cd vuln-analysis
+  ```
+- Prepare your RAG data: Place documents in rag-data/ folder (PDF, TXT, MD supported). If left empty, the image will still ship with built-in security knowledge base.
+- Build and start the containers
+  ```
+  docker compose up -d --build
+  ```
+- Access the app: Open http://localhost:3000 in your browser
 
-## Technology Stack
-- **Ollama**: LLM-based payload generation and inference  
-- **Python**: Core engine and API  
-- **JSON/YAML**: Config-driven payload templates  
-- **Heuristic modules**: Regex, token-based, pattern matching  
-
-## References
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)  
-- [Ollama](https://ollama.com)  
-- [Secure Coding Standards](https://cwe.mitre.org)  
+## Demo
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/rXCPoW0GvaI/0.jpg)](https://www.youtube.com/watch?v=rXCPoW0GvaI)
